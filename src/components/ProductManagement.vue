@@ -1,16 +1,20 @@
 <template>
+  <!-- v-model is a directive that creates a two-way data binding between a value in our template and a value in our data properties -->
   <input type="text" v-model="name" />
 
   <input type="text" v-model="description" />
 
   <select v-model="type">
+    <!-- v-for is a directive used to loop over a data usually an array -->
     <option v-for="option in typeOptions" :value="option" :key="option">
+      <!-- The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces) -->
       {{ option }}
     </option>
   </select>
 
   <input type="number" v-model="stock" />
 
+  <!-- Listen to DOM events and run some JavaScript when they're triggered -->
   <button @click="addProduct()">Add Product</button>
 </template>
 
