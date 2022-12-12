@@ -12,15 +12,9 @@
   <input type="number" v-model="stock" />
 
   <button @click="addProduct()">Add Product</button>
-
-  <div v-for="product in products" :key="product.name">
-    <ProductItem :item="product"></ProductItem>
-  </div>
 </template>
 
 <script>
-import ProductItem from './ProductItem.vue';
-
 export default {
   name: 'ProductManagement',
   data() {
@@ -60,9 +54,6 @@ export default {
       this.type = null;
       this.stock = '';
     },
-  },
-  components: {
-    ProductItem,
   },
 };
 </script>
