@@ -21,29 +21,27 @@
 <script>
 export default {
   name: 'ProductManagement',
-  data() {
-    return {
-      products: [
-        {
-          name: 'Product 1',
-          description: 'Im a toy product',
-          type: 'TOY',
-          stock: 10,
-        },
-        {
-          name: 'Product 2',
-          description: 'Im a clothes product',
-          type: 'CLOTHES',
-          stock: 1,
-        },
-      ],
-      name: '',
-      description: '',
-      type: null,
-      stock: '',
-      typeOptions: ['TOY', 'CLOTHES'],
-    };
-  },
+  data: () => ({
+    products: [
+      {
+        name: 'Product 1',
+        description: 'Im a toy product',
+        type: 'TOY',
+        stock: 10,
+      },
+      {
+        name: 'Product 2',
+        description: 'Im a clothes product',
+        type: 'CLOTHES',
+        stock: 1,
+      },
+    ],
+    name: '',
+    description: '',
+    type: null,
+    stock: '',
+    typeOptions: ['TOY', 'CLOTHES'],
+  }),
   methods: {
     addProduct() {
       this.products.push({
